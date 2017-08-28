@@ -68,7 +68,7 @@ if (input && input[0] != '/' && input != '-') {
     input = path.join(process.cwd(), input);
 }
 var output = args[2];
-if (output && output[0] != '/') {
+if (output && !path.isAbsolute(output)) {
     output = path.join(process.cwd(), output);
 }
 
